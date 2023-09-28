@@ -13,5 +13,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - ArgHelper to check required parameters
 - readme and documentation
-- github workflow for build and sonar cloud analisys 
+- github workflow for build and sonar cloud analysis 
 - Code of conduct
