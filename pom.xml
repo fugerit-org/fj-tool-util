@@ -13,7 +13,7 @@
 
 	<name>Runtime tool utilities.</name>
 	<description>Set of utilities to include in standalone tools.</description>
-	<version>0.1.0</version>
+	<version>1.0.0</version>
 
 	<licenses>
 		<license>
