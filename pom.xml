@@ -7,12 +7,12 @@
 	<parent>
 		<groupId>org.fugerit.java</groupId>
 		<artifactId>fj-bom</artifactId>
-		<version>1.4.7</version>
+		<version>1.6.0</version>
 		<relativePath/>
 	</parent>
 
 	<name>Runtime tool utilities.</name>
-	<description>Set of utilities to include in stand alone tools.</description>
+	<description>Set of utilities to include in standalone tools.</description>
 	<version>0.1.0</version>
 
 	<licenses>
@@ -36,7 +36,7 @@
 	</issueManagement>
 
 	<properties>
-		<fj-version>8.4.7</fj-version>
+		<fj-version>8.4.8</fj-version>
 	</properties>
 
 	<dependencies>
