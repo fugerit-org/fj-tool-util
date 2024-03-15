@@ -7,12 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- fj-bom set to 1.6.1
+- fj-core set to 8.5.3
+
 ## [1.0.0] - 2024-02-18
 
 ### Changed
 
 - fj-bom set to 1.6.0
-- fj-lib set to 8.4.8
+- fj-core set to 8.4.8
 - Workflows review
 - Upgraded build_maven_package workflow to version 1.0.1, (accespt DISABLE_MAVEN_DEPENDENCY_SUBMISSION)
 
