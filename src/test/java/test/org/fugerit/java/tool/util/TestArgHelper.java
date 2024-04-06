@@ -2,6 +2,7 @@ package test.org.fugerit.java.tool.util;
 
 import java.util.Properties;
 
+import org.fugerit.java.core.cfg.ConfigException;
 import org.fugerit.java.core.cfg.ConfigRuntimeException;
 import org.fugerit.java.core.cli.ArgUtils;
 import org.fugerit.java.core.util.PropsIO;
@@ -11,6 +12,13 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 class TestArgHelper {
+
+	@Test
+	void testArgRequiredSimple() throws ConfigException {
+		Properties params = PropsIO.loadFromClassLoaderSafe( "params/test-params1.properties" );
+		Assertions.assertNotNull( ArgHelper.checkRequired( params, "arg1" ) );
+		Assertions.assertThrows( ConfigException.class, () -> ArgHelper.checkRequired( params, "argNA" ) );
+	}
 
 	@Test
 	void testArgRequiredOk() {
