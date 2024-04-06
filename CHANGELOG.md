@@ -13,8 +13,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- fj-bom set to 1.6.1
-- fj-core set to 8.5.3
+- fj-bom set to 1.6.4
+- fj-core set to 8.5.5
 
 ## [1.0.0] - 2024-02-18
 

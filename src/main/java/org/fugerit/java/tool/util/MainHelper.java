@@ -4,11 +4,9 @@ import lombok.extern.slf4j.Slf4j;
 import org.fugerit.java.core.function.SafeFunction;
 import org.fugerit.java.core.function.UnsafeConsumer;
 import org.fugerit.java.core.function.UnsafeVoid;
-import org.fugerit.java.core.lang.ex.CodeException;
-import org.fugerit.java.core.util.ObjectUtils;
+import org.fugerit.java.core.lang.ex.CodeEx;
 import org.fugerit.java.core.util.result.Result;
 
-import java.util.function.Consumer;
 import java.util.function.IntConsumer;
 
 @Slf4j
@@ -57,8 +55,8 @@ public class MainHelper {
     }
 
     public static int evaluateExitCode(Throwable ex ) {
-        if ( ex instanceof CodeException ) {
-            CodeException codeEx = (CodeException) ex;
+        if ( ex instanceof CodeEx) {
+            CodeEx codeEx = (CodeEx) ex;
             return codeEx.getCode();
         } else if ( ex != null ) {
             return FAIL_DEFAULT;
