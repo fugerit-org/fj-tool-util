@@ -24,7 +24,7 @@ public class ArgHelper {
 		if ( value != null ) {
 			log.trace( "required parem '{}' found '{}'" );
 		} else {
-			throw new ConfigException( "Missing required parameter : "+key );
+			throw new ConfigException( String.format( "Missing required parameter : %s", key ), MainHelper.FAIL_MISSING_REQUIRED_PARAM );
 		}
 		return value;
 	}
@@ -41,7 +41,7 @@ public class ArgHelper {
 			}
 		}
 		if ( !notFound.isEmpty() ) {
-			throw new ConfigRuntimeException( "Missing parameters : "+StringUtils.concat("," , notFound) );
+			throw new ConfigRuntimeException( String.format( "Missing parameters : %s", StringUtils.concat("," , notFound) ), MainHelper.FAIL_MISSING_REQUIRED_PARAM );
 		}
 		return notFound.isEmpty();
 	}
