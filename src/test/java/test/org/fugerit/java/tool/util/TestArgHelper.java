@@ -5,21 +5,21 @@ import java.util.Properties;
 import org.fugerit.java.core.cfg.ConfigRuntimeException;
 import org.fugerit.java.core.util.PropsIO;
 import org.fugerit.java.tool.util.ArgHelper;
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
-public class TestArgHelper {
+class TestArgHelper {
 
 	@Test
-	public void testArgRequiredOk() {
+	void testArgRequiredOk() {
 		Properties params = PropsIO.loadFromClassLoaderSafe( "params/test-params1.properties" );
-		Assert.assertThrows( ConfigRuntimeException.class , () -> ArgHelper.checkAllRequiredThrowRuntimeEx(params, "arg1", "not-exists" ) );
+		Assertions.assertThrows( ConfigRuntimeException.class , () -> ArgHelper.checkAllRequiredThrowRuntimeEx(params, "arg1", "not-exists" ) );
 	}
 	
 	@Test
-	public void testArgRequiredEx() {
+	void testArgRequiredEx() {
 		Properties params = PropsIO.loadFromClassLoaderSafe( "params/test-params1.properties" );
-		Assert.assertTrue( ArgHelper.checkAllRequiredThrowRuntimeEx(params, "arg2", "arg3" ) );
+		Assertions.assertTrue( ArgHelper.checkAllRequiredThrowRuntimeEx(params, "arg2", "arg3" ) );
 	}
 	
 }
