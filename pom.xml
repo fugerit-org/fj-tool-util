@@ -36,7 +36,7 @@
 	</issueManagement>
 
 	<properties>
-		<fj-version>8.5.9</fj-version>
+		<fj-version>8.6.2</fj-version>
 	</properties>
 
 	<dependencies>
